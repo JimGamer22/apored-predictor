@@ -1,3 +1,3 @@
 # Apored-predictor
 
-Ayri
+Du kleiner Go
