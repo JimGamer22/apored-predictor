@@ -74,7 +74,8 @@ with tab1:
         st.metric("Gewinnchance", f"{prob:.1f}%")
         
         if ev > 1.05 and kelly > 0:
-            st.success(f"TIPP: JA (EV: {ev:.2f}) - Einsatz: {kelly:.1f}%")
+            # Hier wurde die Textausgabe präzisiert
+            st.success(f"TIPP: JA (EV: {ev:.2f}) — Setze {kelly:.1f}% deines Vermögens")
         else:
             st.error(f"KEIN JA (EV: {ev:.2f})")
 
@@ -117,3 +118,4 @@ with tab3:
         st.dataframe(df.sort_values(by='runde', ascending=False).head(15))
     else:
         st.info("Noch keine Daten vorhanden.")
+        
