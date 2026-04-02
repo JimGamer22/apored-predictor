@@ -5,7 +5,7 @@ from datetime import datetime
 
 # --- SETUP ---
 st.set_page_config(page_title="ApoRed Predictor Cloud", layout="centered")
-st.title("🔴 ApoRed Reload Predictor (Cloud)")
+st.title("ApoRed Reload Predictor (Cloud)")
 
 # Verbindung zu Google Sheets herstellen
 conn = st.connection("gsheets", type=GSheetsConnection)
@@ -31,7 +31,7 @@ def calculate_kelly(prob, yes_pct):
     f = (p * (b + 1) - 1) / b
     return max(0, f / 2)
 
-MAP_MODES = {"1": "reload venture", "2": "oasis", "3": "slurp rush"}
+MAP_MODES = {"1": "venture", "2": "oasis", "3": "slurp rush"}
 df = load_data()
 
 tab1, tab2, tab3 = st.tabs(["Check Wette", "Runde eintragen", "Statistik"])
